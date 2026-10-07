@@ -2,7 +2,21 @@
 
 A responsive personal farewell website: a public colleague album, full-message dialogs, and a password-protected admin page. Add, edit, and delete colleagues, upload portraits, and customize your introduction and signature. Sample notes are clearly labelled and disappear when the first real note is saved.
 
-## Run
+## Public website on GitHub Pages
+
+The `docs/` version is designed for GitHub Pages, with GitHub-backed admin publishing. The original Node/SQLite version is retained under `public/` and `server.mjs` for optional self-hosting.
+
+- Album: https://rahulmehtaa.github.io/farewell-album/
+- Admin: https://rahulmehtaa.github.io/farewell-album/admin.html
+- Publishing source: `main` branch, `/docs` folder.
+
+The Pages admin uses a fine-grained GitHub personal access token instead of the Node server password. Create one under GitHub Settings → Developer settings → Personal access tokens → Fine-grained tokens, select **Only select repositories → farewell-album**, and allow **Contents: Read and write**. Choose an expiry date. Paste the token directly into the admin page; do not send it in chat or commit it. The admin page includes these instructions.
+
+The token stays only in browser-tab memory and is sent only to GitHub's API. Refreshing or closing the page signs you out. Saving creates a commit to `docs/album.json`, which starts a GitHub Pages publication. Public changes usually take a minute or two. Conflicting edits from another tab are rejected to prevent overwrites. Photos are resized in the browser; the album file is limited to 15 MB. Notes and photos are public in the repository. Removing an entry hides it from the album but does not erase previous GitHub commits.
+
+GitHub Pages itself does not run a server or database. This version uses GitHub's repository API for storage and authenticated writes. No paid application host is required.
+
+## Run the optional Node/SQLite version
 
 Requires Node.js 24 or later. No package installation is needed.
 
