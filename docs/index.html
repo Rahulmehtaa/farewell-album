@@ -1,2 +1,46 @@
-<!doctype html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' data: blob:; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A collection of personal thank-you notes to the people who made work special."><title>Until we meet again · Rahul</title><link rel="stylesheet" href="./styles.css"><script src="./app.js" defer></script></head><body><header><a class="brand" href="./">R<span class="brand-dot">.</span> <span class="brand-label">THE FAREWELL ALBUM</span></a><nav><a href="#notes">The people</a><a href="./admin.html">Admin</a></nav></header><main><section class="hero"><div class="hero-main"><p class="eyebrow">A NEW CHAPTER. THE SAME GRATITUDE.</p><h1 id="title">Some goodbyes deserve more than a message.</h1><p class="hero-caption">A few words for the people who made the journey.</p><a class="button" href="#notes">Read your note</a></div><aside class="letter"><span class="letter-label">ONE LAST NOTE</span><span class="quote-mark">“</span><p id="letter"></p><p class="signature" id="signature"></p><div class="letter-bottom">NOT AN ENDING. JUST A SEE YOU LATER.</div></aside></section><section id="notes" class="notes"><div class="section-heading"><div><p class="eyebrow">THE BEST PART WAS THE PEOPLE</p><h2>For each of you<span class="brand-dot">.</span></h2></div><span id="count" class="count"></span></div><p id="status" role="status"></p><div id="cards" class="cards"></div></section><section class="closing"><span class="eyebrow">TAKING THE MEMORIES WITH ME</span><p>Different paths.<br>Same wonderful people.</p><span class="closing-small">Until we meet again.</span></section></main><footer><span>Made with gratitude.</span><a href="./admin.html">Manage this album</a></footer><dialog id="note"><button class="close" aria-label="Close message">×</button><div id="note-content"></div></dialog></body></html>
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' data: blob:; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A collection of personal thank-you notes to the people who made work special.">
+  <meta name="theme-color" content="#244bff">
+  <title>Until we meet again · Rahul</title>
+  <link rel="stylesheet" href="./styles.css?v=20261009">
+  <script src="./app.js?v=20261009" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#notes">Skip to farewell messages</a>
+  <header>
+    <a class="brand" href="./" aria-label="Farewell album home"><span class="brand-monogram">R<span>.</span></span><span class="brand-label">THE FAREWELL ALBUM<small>A chapter worth remembering</small></span></a>
+    <nav aria-label="Main navigation"><a class="nav-notes" href="#notes">The people</a><a class="nav-admin" href="./admin.html">Manage album</a></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-main">
+        <p class="eyebrow hero-label"><span class="spark" aria-hidden="true">✦</span> A NEW CHAPTER. THE SAME GRATITUDE.</p>
+        <h1 id="title">Some goodbyes deserve more than a message.</h1>
+        <p class="hero-caption">A few words for the people who made the journey.</p>
+        <a class="button hero-button" href="#notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>Find your message</a>
+        <p class="hero-footnote">For the laughs, the lessons, and everything in between.</p>
+      </div>
+      <aside class="letter" aria-label="A farewell note to everyone">
+        <div class="letter-top"><span class="letter-label">A NOTE TO EVERYONE</span><span class="letter-heart" aria-hidden="true">♡</span></div>
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <p id="letter"></p>
+        <p class="signature" id="signature"></p>
+        <div class="letter-bottom">UNTIL WE MEET AGAIN <span aria-hidden="true">✦</span></div>
+      </aside>
+    </section>
+    <section id="notes" class="notes" aria-labelledby="notes-heading">
+      <div class="section-heading"><div><p class="eyebrow">THE BEST PART WAS THE PEOPLE</p><h2 id="notes-heading">A little note.<br><span>A lot of gratitude.</span></h2></div><span id="count" class="count"></span></div>
+      <p id="status" role="status"></p>
+      <div id="cards" class="cards"></div>
+    </section>
+    <section class="closing"><span class="closing-spark" aria-hidden="true">✦</span><div><span class="eyebrow">TAKING THE MEMORIES WITH ME</span><p>Different paths.<br><span>Same wonderful people.</span></p></div><span class="closing-small">This is a see you later.</span></section>
+  </main>
+  <footer><span>Made with gratitude. <span class="footer-heart" aria-hidden="true">♡</span></span><a href="./admin.html">Manage this album</a></footer>
+  <dialog id="note" aria-labelledby="dialog-name"><button class="close" aria-label="Close message">×</button><div id="note-content"></div></dialog>
+</body>
+</html>
